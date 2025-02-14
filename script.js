@@ -47,4 +47,50 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.style.display = "none";
         });
     }
+
+    // ========== CLUE 3 PAGE: Timer Logic ==========
+    if (document.body.classList.contains("clue3-page")) {  // Ensure script only runs on Clue 3
+        function startTimer(storyNum, timeInSeconds, event) {
+            // Allow the link to open normally
+            setTimeout(function () {
+                showQuestion(storyNum);
+            }, timeInSeconds * 1000); // Convert seconds to milliseconds
+
+            // Show the override button after 10 seconds
+            setTimeout(function () {
+                document.getElementById(`story${storyNum}-override`).classList.remove("hidden");
+            }, 10000);
+        }
+
+        function showQuestion(storyNum) {
+            document.getElementById(`story${storyNum}-question`).classList.remove("hidden");
+            document.getElementById(`story${storyNum}-override`).classList.add("hidden"); // Hide override button after clicking
+        }
+
+        // Make functions available globally
+        window.startTimer = startTimer;
+        window.showQuestion = showQuestion;
+    }
+
+    if (document.body.classList.contains("clue3-page")) {
+        // Secret Elements
+        const secretCircle = document.getElementById("c3-secret-circle");
+        const secretPopup = document.getElementById("c3-secret-popup");
+        const closeSecretPopup = document.getElementById("c3-close-secret-popup");
+
+        // Show the secret circle after 2 minutes
+        setTimeout(function () {
+            secretCircle.classList.remove("c3-hidden");
+        }, 120000); // 2 minutes = 120,000 ms
+
+        // Show pop-up when clicking the green circle
+        secretCircle.addEventListener("click", function () {
+            secretPopup.style.display = "flex";
+        });
+
+        // Close pop-up when clicking the close button
+        closeSecretPopup.addEventListener("click", function () {
+            secretPopup.style.display = "none";
+        });
+    }
 });

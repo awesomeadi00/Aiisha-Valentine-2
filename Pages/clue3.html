@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heppy Valentine Aiishu!</title>
+    <title>Clue 3</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,15 +15,85 @@
     <link rel="icon" type="image/png" href="../Images/doggy.png" width="96" height="96">
 </head>
 
-<body>
+<body class="clue3-page">
     <!-- Back Button -->
     <a href="index.html" class="back-button">
         <i class="fas fa-arrow-left"></i> Back
     </a>
-    
-    <div class="container">
 
+    <!-- Puzzle Container -->
+    <div class="puzzle-container">
+        <h2>Watch these Reddit stories.</h2>
+        <h2>When you click on a link, watch the whole story and come back to receive your clue.</h2>
+        <h2>Do this for all 3 and you'll get your answer to this puzzle.</h2>
+
+        <div class="link-container">
+            <!-- Story 1 -->
+            <div class="story-link">
+                <a href="https://www.tiktok.com/@scalingstories/video/7315686122259008811?lang=en" target="_blank"
+                    onclick="startTimer(1, 246)"> <!-- 04:06 min = 246 seconds -->
+                    <img src="../Images/tiktok.png" alt="TikTok 1">
+                </a>
+                <p id="story1-question" class="hidden">What is the first letter of the word at <strong>0:38</strong>?
+                </p>
+                <button id="story1-override" class="override-btn hidden" onclick="showQuestion(1)">Override</button>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="story-link">
+                <a href="https://www.tiktok.com/@scalingstories/video/7295187884229889322?lang=en" target="_blank"
+                    onclick="startTimer(2, 445)"> <!-- 07:25 min = 445 seconds -->
+                    <img src="../Images/tiktok.png" alt="TikTok 2">
+                </a>
+                <p id="story2-question" class="hidden">What is the first letter of the word at <strong>2:14</strong>?
+                </p>
+                <button id="story2-override" class="override-btn hidden" onclick="showQuestion(2)">Override</button>
+            </div>
+
+            <!-- Story 3 -->
+            <div class="story-link">
+                <a href="https://www.tiktok.com/@scalingstories/video/7305986340586261803?lang=en" target="_blank"
+                    onclick="startTimer(3, 572)"> <!-- 09:32 min = 572 seconds -->
+                    <img src="../Images/tiktok.png" alt="TikTok 3">
+                </a>
+                <p id="story3-question" class="hidden">What is the first letter of the word at <strong>0:41</strong>?
+                </p>
+                <button id="story3-override" class="override-btn hidden" onclick="showQuestion(3)">Override</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Secret Green Circle (Initially Hidden) -->
+    <div id="c3-secret-circle" class="c3-hidden"></div>
+
+    <!-- Secret Pop-up Modal -->
+    <div id="c3-secret-popup" class="c3-hidden c3-popup-overlay">
+        <div class="c3-popup-content">
+            <span class="c3-close-btn" id="c3-close-secret-popup">&times;</span>
+            <p>Yay you found the third secret!</p>
+            <p>Try and find all the secrets in each of the clues, they will reveal a sentence when put together in order</p>
+            <p>The third part of secret the sentence is the following words:</p>
+
+            <div class="c3-youtube-container">
+                <!-- YouTube Link 1 -->
+                <div class="c3-youtube-link">
+                    <a href="https://www.youtube.com/watch?v=YGCVpAiiCdo" target="_blank">
+                        <img src="../Images/youtube.png" alt="YouTube 1">
+                    </a>
+                    <p class="c3-secret-question">What is the 16th word of the Reddit story title?</p>
+                </div>
+
+                <!-- YouTube Link 2 -->
+                <div class="c3-youtube-link">
+                    <a href="https://www.youtube.com/watch?v=ye-gESbZd0Q" target="_blank">
+                        <img src="../Images/youtube.png" alt="YouTube 2">
+                    </a>
+                    <p class="c3-secret-question">What is the 11th word of the Reddit story title?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../script.js"></script>
 </body>
 

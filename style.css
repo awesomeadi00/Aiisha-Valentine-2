@@ -282,3 +282,173 @@ body {
 .c1-close-btn:hover {
     color: #ca5c5c;
 }
+
+/* Clue 3 ================================================================================================ */
+/* Puzzle Container */
+.puzzle-container {
+    width: 80%;
+    height: 70vh;
+    /* Taller container */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Adjustments */
+.puzzle-container h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.puzzle-container p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Link Section */
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+/* Individual Story Link */
+.story-link {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.story-link a img {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.story-link a img:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Override Button */
+.override-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.override-btn:hover {
+    background-color: #ffdd44;
+}
+
+/* Secret Green Circle */
+#c3-secret-circle {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#c3-secret-circle:hover {
+    background-color: #28a745;
+    /* Lighter green on hover */
+}
+
+/* YouTube Links Container */
+.c3-youtube-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* More spacing between icons */
+    margin-top: 10px;
+}
+
+/* YouTube Icon Styling */
+.c3-youtube-link {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* Spacing between icon and question */
+}
+
+.c3-youtube-link a img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.c3-youtube-link a img:hover {
+    transform: scale(1.1);
+}
+
+/* Secret Question Under Each Link */
+.c3-secret-question {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Hidden Elements */
+.c3-hidden {
+    display: none;
+}
+
+/* Secret Pop-up Modal */
+.c3-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pop-up Content */
+.c3-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close Button */
+.c3-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.c3-close-btn:hover {
+    color: red;
+}
