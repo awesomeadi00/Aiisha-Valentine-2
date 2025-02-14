@@ -24,7 +24,7 @@
 
         <!-- Middle Section with Door Image -->
         <div class="middle-space">
-            <a href="final.html" class="door-link">
+            <a href="#" class="door-link" id="door">
                 <img src="../Images/door.png" alt="Mysterious Door" class="door-image">
             </a>
         </div>
@@ -32,6 +32,21 @@
         <div class="column right">
             <a href="clue3.html" class="block">Clue 3</a>
             <a href="clue4.html" class="block">Clue 4</a>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup-overlay" id="door-popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-door-popup">&times;</span>
+            <p><strong>HI AIISHU, HEPPY VALENTINE SWEETIE!</strong></p>
+            <p>I made these puzzles for you because I know you loooove puzzles.</p>
+            <p>Go to each puzzle and solve them, when you do, you will get a code from each puzzle.</p>
+            <p>When you combine all the codes in order of the puzzles, you will receive an overall code</p>
+            <p>Type it here and if it is correct you will get YOUR PRIZE!!! YAY HAVE FUN!!!!</p>
+            <input type="text" id="code-input" placeholder="Type here...">
+            <button id="submit-code">Submit</button>
+            <p id="feedback-message"></p>
         </div>
     </div>
 

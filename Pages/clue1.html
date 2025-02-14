@@ -20,9 +20,25 @@
     <a href="index.html" class="back-button">
         <i class="fas fa-arrow-left"></i> Back
     </a>
-    
-    <div class="container">
 
+    <div class="clue-container">
+        <div class="iframe-container">
+            <iframe id="p5js-iframe" src="https://editor.p5js.org/awesomeadi00/full/8d207aRKn"></iframe>
+        </div>
+    </div>
+
+    <!-- Secret Circle -->
+    <div class="secret-circle" id="secret-circle"></div>
+    
+    <!-- Pop-up Modal -->
+    <div class="c1-popup-overlay" id="popup">
+        <div class="c1-popup-content">
+            <span class="c1-close-btn" id="c1-close-popup">&times;</span>
+            <p>Yay you found the first secret!</p>
+            <p>Try and find all the secrets in each of the clues, they will reveal a sentence when put together in order</p>
+            <p>The first word of the sentence is: </p>
+            <p>"Type"</p>
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>
